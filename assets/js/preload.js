@@ -6,10 +6,10 @@ function preload() {
     
     this.load.image('playerShip1', 'assets/images/playerShip/playerShip1.png');
     this.load.image('playerShip2', 'assets/images/playerShip/playerShip2.png');
-    this.load.image('heart', 'assets/images/Extras/heart.png');
-    this.load.image('boost', 'assets/images/Extras/boost.png');
-    this.load.image('shieldIcon', 'assets/images/Extras/shieldIcon.png');
-    this.load.image('shield', 'assets/images/Extras/shield.png');
+    this.load.image('heart', 'assets/images/extras/heart.png');
+    this.load.image('boost', 'assets/images/extras/boost.png');
+    this.load.image('shieldIcon', 'assets/images/extras/shieldIcon.png');
+    this.load.image('shield', 'assets/images/extras/shield.png');
 
     this.load.image('alienShip10', 'assets/images/alienShip/alienShip10.png');
     this.load.image('alienShip11', 'assets/images/alienShip/alienShip11.png');
