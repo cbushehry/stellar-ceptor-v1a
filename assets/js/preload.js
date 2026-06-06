@@ -30,9 +30,9 @@ function preload() {
 
     this.load.image('powerUp1', 'assets/images/powerups/powerup1.png'); // + HEART
     this.load.image('powerUp2', 'assets/images/powerups/powerup2.png'); // + SHIELD
-    this.load.image('powerUp3', 'assets/images/powerups/powerup3.png'); // + SPEED
-    this.load.image('powerUp4', 'assets/images/powerups/powerup4.png'); // + LASER SPEED
-    this.load.image('powerUp5', 'assets/images/powerups/powerup5.png'); // + LASER POWER
+    // this.load.image('powerUp3', 'assets/images/powerups/powerup3.png'); // + SPEED
+    // this.load.image('powerUp4', 'assets/images/powerups/powerup4.png'); // + LASER SPEED
+    // this.load.image('powerUp5', 'assets/images/powerups/powerup5.png'); // + LASER POWER
 
     this.load.image('asteroid11', 'assets/images/asteroids/asteroid11.png');
     this.load.image('asteroid12', 'assets/images/asteroids/asteroid12.png');

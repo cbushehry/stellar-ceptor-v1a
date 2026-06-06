@@ -4,20 +4,3 @@ body, html {
     overflow: hidden;
 }
 
-#score {
-    position: fixed;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    color: #fffc60;
-}
-
-#timer {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    z-index: 10;
-}

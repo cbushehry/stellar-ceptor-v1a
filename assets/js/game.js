@@ -1,4 +1,8 @@
 let playerScore = 0;
+let background1, background2;
+let controls;
+let lasers, asteroids;
+
 const KEY_CONFIG = {
     ACCELERATE: 'W',
     DECELERATE: 'S',
