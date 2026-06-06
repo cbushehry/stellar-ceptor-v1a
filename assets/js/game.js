@@ -390,18 +390,16 @@ function shootLaser() {
 function spawnAlienShip1(player) {
     if (!this.alienShip1) {
         this.alienShip1 = this.physics.add.sprite(-100, Phaser.Math.Between(100, window.innerHeight - 100), 'alienShip10');
-        this.alienShip1.setActive(false).setVisible(false);
+        this.alienShip1.setActive(true).setVisible(true);
         this.alienShip1.play('alienShip1');
         this.alienShip1.hitCount = 5;
         this.alienShip1.setScale(1.5);
         this.alienShip1.setDepth(1);
-        this.alienShip1.setImmovable(true); // Ensure the alien ship is immovable
+        this.alienShip1.setImmovable(true);
         this.alienShip1.isAlienShip = true;
         this.alienShips.add(this.alienShip1);
         this.alienShip1.startTracking = false;
     }
-
-    this.alienShip1.setActive(true).setVisible(true);
 
     if (this.alienShip1.x < window.innerWidth * 0.2) {
         this.alienShip1.x += 0.5;
@@ -609,8 +607,7 @@ function laserObjectCollision(laser, object) {
             explode.call(this, object);
             playerScore += 10;
             this.scoreText.setText(playerScore);
-            object.hitCount = 5;
-            object.setActive(false).setVisible(false);
+            this.alienShip1 = null;
         }
     } else if (object.isAsteroid) {
         object.hitCount -= 1;
