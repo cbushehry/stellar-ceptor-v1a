@@ -616,19 +616,20 @@ function laserObjectCollision(laser, object) {
             explode.call(this, object, isPowerUp);
             playerScore += (object.isClusterAsteroid ? 1 : 3);
             this.scoreText.setText(playerScore);
-            object.destroy();
         }
     }
 }
 
 function explode(object, isPowerUp = false) {
     let explosionScale = 1.67;
-    let explosion = this.add.sprite(object.x, object.y, 'explosion1').play('explode');
+    let x = object.x;
+    let y = object.y;
+    let explosion = this.add.sprite(x, y, 'explosion1').play('explode');
     explosion.setScale(explosionScale);
     explosion.on('animationcomplete', () => {
         explosion.destroy();
         if (isPowerUp) {
-            dropPowerUp.call(this, object.x, object.y);
+            dropPowerUp.call(this, x, y);
         }
     });
     object.destroy();

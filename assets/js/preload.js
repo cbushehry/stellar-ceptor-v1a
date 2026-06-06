@@ -6,10 +6,10 @@ function preload() {
     
     this.load.image('playerShip1', 'assets/images/playerShip/playerShip1.png');
     this.load.image('playerShip2', 'assets/images/playerShip/playerShip2.png');
-    this.load.image('heart', 'assets/images/extras/heart.png');
-    this.load.image('boost', 'assets/images/extras/boost.png');
-    this.load.image('shieldIcon', 'assets/images/extras/shieldIcon.png');
-    this.load.image('shield', 'assets/images/extras/shield.png');
+    this.load.image('heart', 'assets/images/Extras/heart.png');
+    this.load.image('boost', 'assets/images/Extras/boost.png');
+    this.load.image('shieldIcon', 'assets/images/Extras/shieldIcon.png');
+    this.load.image('shield', 'assets/images/Extras/shield.png');
 
     this.load.image('alienShip10', 'assets/images/alienShip/alienShip10.png');
     this.load.image('alienShip11', 'assets/images/alienShip/alienShip11.png');
@@ -21,18 +21,18 @@ function preload() {
     this.load.image('alienShip32', 'assets/images/alienShip/alienShip32.png');
     this.load.image('alienShip41', 'assets/images/alienShip/alienShip41.png');
     this.load.image('alienShip42', 'assets/images/alienShip/alienShip42.png');
-    this.load.image('alienShip51', 'assets/images/alienShip/alienShip51.png');
+    this.load.image('alienShip53', 'assets/images/alienShip/alienShip53.png');
 
     this.load.image('laser1', 'assets/images/lasers/laser1.png'); // orange
     this.load.image('laser2', 'assets/images/lasers/laser2.png'); // red
     this.load.image('laser3', 'assets/images/lasers/laser3.png'); // blue
     this.load.image('laser4', 'assets/images/lasers/laser4.png'); // green
 
-    this.load.image('powerUp1', 'assets/images/powerups/powerUp1.png'); // + HEART
-    this.load.image('powerUp2', 'assets/images/powerups/powerUp2.png'); // + SHIELD
-    this.load.image('powerUp3', 'assets/images/powerups/powerUp3.png'); // + SPEED
-    this.load.image('powerUp4', 'assets/images/powerups/powerUp4.png'); // + LASER SPEED
-    this.load.image('powerUp5', 'assets/images/powerups/powerUp5.png'); // + LASER POWER
+    this.load.image('powerUp1', 'assets/images/powerups/powerup1.png'); // + HEART
+    this.load.image('powerUp2', 'assets/images/powerups/powerup2.png'); // + SHIELD
+    this.load.image('powerUp3', 'assets/images/powerups/powerup3.png'); // + SPEED
+    this.load.image('powerUp4', 'assets/images/powerups/powerup4.png'); // + LASER SPEED
+    this.load.image('powerUp5', 'assets/images/powerups/powerup5.png'); // + LASER POWER
 
     this.load.image('asteroid11', 'assets/images/asteroids/asteroid11.png');
     this.load.image('asteroid12', 'assets/images/asteroids/asteroid12.png');
