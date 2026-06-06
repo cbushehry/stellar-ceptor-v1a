@@ -99,8 +99,7 @@ function create() {
         updateHearts.call(this.scene);
     
         if (this.health == 0) {
-            window.alert("Game Over!");
-            this.scene.scene.restart();
+            showGameOver(this.scene);
         }
     };
 
@@ -316,6 +315,15 @@ function update() {
     if (this.isShooting) {
         shootLaser.call(this);
     }
+
+    const margin = 150;
+    asteroids.getChildren().forEach(asteroid => {
+        if (!asteroid.active) return;
+        if (asteroid.x < -margin || asteroid.x > this.scale.width + margin ||
+            asteroid.y < -margin || asteroid.y > this.scale.height + margin) {
+            asteroid.setActive(false).setVisible(false);
+        }
+    });
 }
 
 function updateHearts() {
@@ -410,6 +418,7 @@ function spawnAlienShip1(player) {
     } else {
         var angle = Phaser.Math.Angle.Between(this.alienShip1.x, this.alienShip1.y, player.x, player.y);
         this.alienShip1.rotation = Phaser.Math.Angle.RotateTo(this.alienShip1.rotation, angle, 0.01);
+        this.physics.velocityFromRotation(this.alienShip1.rotation, 60, this.alienShip1.body.velocity);
     }
 }
 
@@ -640,6 +649,28 @@ function updateTimer() {
     const minutes = Math.floor(this.timer / 60);
     const seconds = this.timer % 60;
     this.timerText.setText(minutes + ':' + (seconds < 10 ? '0' + seconds : seconds));
+}
+
+function showGameOver(scene) {
+    scene.add.rectangle(
+        scene.scale.width / 2, scene.scale.height / 2,
+        scene.scale.width, scene.scale.height,
+        0x000000, 0.7
+    ).setDepth(10);
+
+    scene.add.text(scene.scale.width / 2, scene.scale.height / 2 - 40, 'GAME OVER', {
+        fontSize: '64px',
+        fill: '#ffffff'
+    }).setOrigin(0.5).setDepth(10);
+
+    scene.add.text(scene.scale.width / 2, scene.scale.height / 2 + 40, 'Click to Restart', {
+        fontSize: '28px',
+        fill: '#aaaaaa'
+    }).setOrigin(0.5).setDepth(10);
+
+    scene.input.once('pointerdown', () => {
+        scene.scene.restart();
+    });
 }
 
 let gameConfig = {
